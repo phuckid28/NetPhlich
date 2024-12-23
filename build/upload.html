@@ -227,7 +227,7 @@
     </form>
     </div>
     <script>
-      let API_URL = "http://127.0.0.1:8090/admin/uploadFilmInfo";
+      let API_URL = "http://localhost:8090/admin/uploadFilmInfo";
       //let posterExtension = $('#poster_input')[0].files[0].name.substring($('#poster_input')[0].files[0].name.lastIndexOf('.'));
       $(document).ready(function () {
         if (getCookie("token") == "") {
@@ -274,7 +274,7 @@
         let formData = new FormData();
         formData.append("file", movie, uuid + ".mp4");
         $.ajax({
-          url: "http://127.0.0.1:8090/admin/upload",
+          url: "http://localhost:8090/admin/upload",
           type: "POST",
           data: formData,
           processData: false,
@@ -291,7 +291,7 @@
       }
       function genHLS(token, uuid) {
         $.ajax({
-          url: "http://127.0.0.1:8090/hls/generate/" + uuid,
+          url: "http://localhost:8090/hls/generate/" + uuid,
           type: "POST",
           //data: JSON.stringify({uuid: uuid}),
           contentType: "application/json",
@@ -305,7 +305,7 @@
         let formData = new FormData();
         formData.append("file", poster, poster.name.replaceAll(" ", ""));
         $.ajax({
-          url: "http://127.0.0.1:8090/admin/uploadPoster/" + uuid,
+          url: "http://localhost:8090/admin/uploadPoster/" + uuid,
           type: "POST",
           data: formData,
           processData: false,

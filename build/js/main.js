@@ -58,7 +58,7 @@ async function renderMovies(genreID = genID, ppage = 0) {
 async function fetchHot(id) {
     let data = "";
     const response = await fetch(
-        `http://127.0.0.1:8090/user/getAllFilmsInfo`,
+        `http://localhost:8090/user/getAllFilmsInfo`,
         {
             method: "GET",
             headers: {
@@ -75,7 +75,7 @@ async function fetchHot(id) {
             id: data[0].uuid,
             title: data[0].filmName,
             release_date: data[0].releaseDate,
-            poster_path: `http://127.0.0.1:8090/public/media/${data[0].uuid}/${data[0].poster}`,
+            poster_path: `http://localhost:8090/public/media/${data[0].uuid}/${data[0].poster}`,
             ovw: data[0].description,
             vote_average: 0,
             vote_count: 0,
@@ -86,7 +86,7 @@ async function fetchHot(id) {
             id: data[i].uuid,
             title: data[i].filmName,
             release_date: data[i].releaseDate,
-            poster_path: `http://127.0.0.1:8090/public/media/${data[i].uuid}/${data[i].poster}`,
+            poster_path: `http://localhost:8090/public/media/${data[i].uuid}/${data[i].poster}`,
             ovw: data[i].description,
             vote_average: 0,
             vote_count: 0,

@@ -12,6 +12,8 @@
 
     "hls.js": "^1.5.8",
 
+    "tailwindcss": "^3.4.17",
+
     "videojs-plus": "^1.6.9"
 
   },

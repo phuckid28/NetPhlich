@@ -10,7 +10,7 @@
       href="asset/img/icon resized cropped.jpg"
       type="image/x-icon"
     />
-    <script src="js/discover.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/key.js"></script>
     <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -124,6 +124,8 @@
         </div>
       </nav>
     </header>
+    
+    
     <div
       class="container w-full max-w-screen-xl mx-auto relative px-4 py-8 justify-center"
     >
@@ -142,11 +144,11 @@
     <script>
       $(document).ready(function () {
         if (getCookie("token") == "") {
-          window.location.href = "login.html";
+          window.location.href = "signin.html";
         }
       });
     </script>
-    <section class=" ">
+    <section>
       <div
         class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
       ></div>
