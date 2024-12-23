@@ -11,7 +11,7 @@ console.log(genID);
 
 function elementGen(movie, gen) {
     return `<div class='flex max-w-sm w-full bg-transparent shadow-md rounded-lg overflow-hidden mx-auto h-full'>
-    <div class='w-2 bg-gray-800 h-96'></div>
+    <div class='w-2 h-96'></div>
 
     <div class="overflow-hidden rounded-xl relative transform hover:-translate-y-2 transition ease-in-out duration-500 shadow-lg hover:shadow-2xl movie-item text-white movie-card"
         >

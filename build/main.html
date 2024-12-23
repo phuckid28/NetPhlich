@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark h-full">
   <head>
     <meta charset="UTF-8" />
     <title>NetPhlich - A clone of Netflix</title>
@@ -16,20 +16,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 
-  <body class="bg-gradient-to-br from-green-400 to-blue-600 rounded-lg">
+  <body class="h-full  flex flex-col">
+    <!-- Check for -->
     <script>
       $(document).ready(function () {
         renderHot();
       });
     </script>
-    <header>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow">
       <nav
         class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
       >
         <div
           class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
         >
-          <a href="index.html" class="flex items-center">
+          <a href="main.html" class="flex items-center">
             <img
               src="./asset/img/icon resized.jpg"
               class="mr-3 h-6 sm:h-9"
@@ -100,13 +102,6 @@
               </li>
               <li>
                 <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >Categories</a
-                >
-              </li>
-              <li>
-                <a
                   href="upload.html"
                   class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >Upload</a
@@ -114,7 +109,7 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="about.html"
                   class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >About</a
                 >
@@ -125,40 +120,35 @@
       </nav>
     </header>
     
-    
-    <div
-      class="container w-full max-w-screen-xl mx-auto relative px-4 py-8 justify-center"
+    <section >
+      <div class="bg-gradient-to-br from-green-400 to-blue-600">
+    <!-- Film container -->
+    <main
+    class="flex-grow p-4 container w-full max-w-screen-xl mx-auto px-4 py-8 justify-center" 
     >
       <div
         id="movies-container"
         class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-center"
       ></div>
+    </main>
     </div>
-    <script>
-      const navLinks = document.querySelector(".nav-links");
-      function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[9%]");
-      }
-    </script>
+    </section>
+
+    <!-- Check for cookies -->
     <script>
       $(document).ready(function () {
         if (getCookie("token") == "") {
-          window.location.href = "signin.html";
+          window.location.href = "main.html";
         }
       });
     </script>
-    <section>
-      <div
-        class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
-      ></div>
-    </section>
 
-    <footer class="bg-white dark:bg-gray-800">
+    <!-- Footer -->
+    <footer class="dark:bg-gray-800">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-            <a href="index.html"flex items-center">
+            <a href="main.html" class="flex items-center">
               <img
                 src="asset/img/icon resized cropped.jpg"
                 class="h-8 me-3"
@@ -199,14 +189,14 @@
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/phuckid28"
                     class="hover:underline"
                     >Github</a
                   >
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://discordapp.com/users/541189146950238208"
                     class="hover:underline"
                     >Discord</a
                   >
@@ -241,8 +231,9 @@
             >. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <!-- Facebook -->
             <a
-              href="#"
+              href="https://www.facebook.com/phuc.daothanh.96/"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -260,8 +251,9 @@
               </svg>
               <span class="sr-only">Facebook page</span>
             </a>
+            <!-- Discord -->
             <a
-              href="#"
+              href="discordapp.com/users/541189146950238208"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -277,27 +269,9 @@
               </svg>
               <span class="sr-only">Discord community</span>
             </a>
+            <!-- Github -->
             <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-            >
-              <svg
-                class="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 17"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span class="sr-only">Twitter page</span>
-            </a>
-            <a
-              href="#"
+              href="https://github.com/phuckid28"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -314,25 +288,6 @@
                 />
               </svg>
               <span class="sr-only">GitHub account</span>
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-            >
-              <svg
-                class="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span class="sr-only">Dribbble account</span>
             </a>
           </div>
         </div>
