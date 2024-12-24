@@ -13,203 +13,205 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
-
   </head>
 
-  <body
-    class="w-full h-full bg-gradient-to-br from-green-400 to-blue-600 "
-  >
-   <!-- Header -->
-   <header>
-    <nav
-      class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
-    >
-      <div
-        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+  <body class="w-full h-full bg-gradient-to-br from-green-400 to-blue-600">
+    <!-- Header -->
+    <header>
+      <nav
+        class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
       >
-        <a href="main.html" class="flex items-center">
-          <img
-            src="./asset/img/icon resized.jpg"
-            class="mr-3 h-6 sm:h-9"
-            alt="NetPhlich Logo"
-          />
-          <span
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >NetPhlich</span
-          >
-        </a>
-        <div class="flex items-center lg:order-2">
-          <a
-            id="logOut"
-            href="signin.html?logout=true"
-            href="index.html"
-            class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-red-600 focus:outline-none dark:focus:ring-gray-800"
-            >Log out</a
-          >
-
-          <button
-            data-collapse-toggle="mobile-menu-2"
-            type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mobile-menu-2"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            <svg
-              class="hidden w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
         <div
-          class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-          id="mobile-menu-2"
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
         >
-          <ul
-            class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
-          >
-            <li>
-              <a
-                href="main.html"
-                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="upload.html"
-                class= "block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                >Upload</a
-              >
-            </li>
-            <li>
-              <a
-                href="about.html"
-                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                >About</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="max-h-full">
-    <form class=" w-3/4 mx-auto my-6" id="upload">
-      <div class="mb-6">
-        <label
-          class="block mb-2 text-sm font-medium text-white"
-          for="movie_input"
-          >Upload movie</label
-        >
-        <input
-          class="block w-full text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-gray-700 border-gray-600 placeholder-gray-400"
-          aria-describedby="file_input_help"
-          id="movie_input"
-          type="file"
-          accept="video/*"
-          required
-        />
-        <p class="mt-1 text-sm text-gray-300" id="movie_input_help">
-          Video file
-        </p>
-      </div>
-      <div class="mb-6">
-        <label
-          class="block mb-2 text-sm font-medium text-white"
-          for="poster_input"
-          >Upload poster</label
-        >
-        <input
-          class="block w-full text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-gray-700 border-gray-600 placeholder-gray-400"
-          aria-describedby="file_input_help"
-          id="poster_input"
-          type="file"
-          accept="image/*"
-        />
-        <p class="mt-1 text-sm text-gray-300" id="poster_input_help">
-          Image file
-        </p>
-      </div>
-      <div class="mb-6">
-        <label for="name" class="block mb-2 text-sm font-medium text-white"
-          >Name</label
-        >
-        <input
-          type="text"
-          id="name"
-          class="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-          placeholder="The new Movie"
-          required
-        />
-      </div>
-      <label for="overview" class="block mb-2 text-sm font-medium text-white"
-        >Overview</label
-      >
-      <textarea
-        id="overview"
-        rows="4"
-        class="mb-6 block p-2.5 w-full text-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-        placeholder="Write your thoughts here..."
-      ></textarea>
-      <div class="mb-6">
-        <div class="relative max-w-sm">
-          <div
-            class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
-          >
-            <svg
-              class="w-4 h-4 text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
+          <a href="main.html" class="flex items-center">
+            <img
+              src="./asset/img/icon resized.jpg"
+              class="mr-3 h-6 sm:h-9"
+              alt="NetPhlich Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >NetPhlich</span
             >
-              <path
-                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-              />
-            </svg>
+          </a>
+          <div class="flex items-center lg:order-2">
+            <a
+              id="logOut"
+              href="signin.html?logout=true"
+              href="index.html"
+              class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-red-600 focus:outline-none dark:focus:ring-gray-800"
+              >Log out</a
+            >
+
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
           </div>
-          <input
-            datepicker
-            type="text"
-            class="border text-sm rounded-lg block w-full ps-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Select Release date"
-            id="release-date"
-          />
+          <div
+            class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <a
+                  href="main.html"
+                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="upload.html"
+                  class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                  >Upload</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+
+    <!-- Uploader -->
+    <main>
+      <div class="max-h-full">
+        <form class="w-3/4 mx-auto my-6" id="upload">
+          <div class="mb-6">
+            <label
+              class="block mb-2 text-sm font-medium text-white"
+              for="movie_input"
+              >Upload movie</label
+            >
+            <input
+              class="block w-full text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-gray-700 border-gray-600 placeholder-gray-400"
+              aria-describedby="file_input_help"
+              id="movie_input"
+              type="file"
+              accept="video/*"
+              required
+            />
+            <p class="mt-1 text-sm text-gray-300" id="movie_input_help">
+              Video file
+            </p>
+          </div>
+          <div class="mb-6">
+            <label
+              class="block mb-2 text-sm font-medium text-white"
+              for="poster_input"
+              >Upload poster</label
+            >
+            <input
+              class="block w-full text-sm border rounded-lg cursor-pointer text-gray-400 focus:outline-none bg-gray-700 border-gray-600 placeholder-gray-400"
+              aria-describedby="file_input_help"
+              id="poster_input"
+              type="file"
+              accept="image/*"
+            />
+            <p class="mt-1 text-sm text-gray-300" id="poster_input_help">
+              Image file
+            </p>
+          </div>
+          <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm font-medium text-white"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+              placeholder="The new Movie"
+              required
+            />
+          </div>
+          <label
+            for="overview"
+            class="block mb-2 text-sm font-medium text-white"
+            >Overview</label
+          >
+          <textarea
+            id="overview"
+            rows="4"
+            class="mb-6 block p-2.5 w-full text-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Write your thoughts here..."
+          ></textarea>
+          <div class="mb-6">
+            <div class="relative max-w-sm">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                  />
+                </svg>
+              </div>
+              <input
+                datepicker
+                type="text"
+                class="border text-sm rounded-lg block w-full ps-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Select Release date"
+                id="release-date"
+              />
+            </div>
+          </div>
+          <button
+            type="submit"
+            id="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Submit
+          </button>
+        </form>
       </div>
-      <button
-        type="submit"
-        id="submit"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Submit
-      </button>
-    </form>
-    </div>
     </main>
+
     <!-- Check for authorize and upload notification -->
     <script>
       let API_URL = "http://localhost:8090/admin/uploadFilmInfo";
@@ -305,156 +307,155 @@
         });
       }
     </script>
-        <!-- Footer -->
-        <footer class="dark:bg-gray-800 sticky top-[100vh] mt-auto">
-          <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div class="md:flex md:justify-between">
-              <div class="mb-6 md:mb-0">
-                <a href="main.html" class="flex items-center">
-                  <img
-                    src="asset/img/icon resized cropped.jpg"
-                    class="h-8 me-3"
-                    alt="NetPhlich Logo"
-                  />
-                  <span
-                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                    >NetPhlich</span
+
+    <!-- Footer -->
+    <footer class="dark:bg-gray-800 sticky top-[100vh] mt-auto">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="main.html" class="flex items-center">
+              <img
+                src="asset/img/icon resized cropped.jpg"
+                class="h-8 me-3"
+                alt="NetPhlich Logo"
+              />
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                >NetPhlich</span
+              >
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Resources
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="https://flowbite.com/" class="hover:underline"
+                    >Flowbite</a
                   >
-                </a>
-              </div>
-              <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                <div>
-                  <h2
-                    class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+                </li>
+                <li>
+                  <a href="https://tailwindcss.com/" class="hover:underline"
+                    >Tailwind CSS</a
                   >
-                    Resources
-                  </h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                      <a href="https://flowbite.com/" class="hover:underline"
-                        >Flowbite</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://tailwindcss.com/" class="hover:underline"
-                        >Tailwind CSS</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2
-                    class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-                  >
-                    Follow us
-                  </h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                      <a
-                        href="https://github.com/phuckid28"
-                        class="hover:underline"
-                        >Github</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://discordapp.com/users/541189146950238208"
-                        class="hover:underline"
-                        >Discord</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2
-                    class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-                  >
-                    Legal
-                  </h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                      <a href="term.html" class="hover:underline">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="term.html" class="hover:underline">Terms &amp; Conditions</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
-            <hr
-              class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
-            />
-            <div class="sm:flex sm:items-center sm:justify-between">
-              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-                >© 2024
-                <a href="main.html" class="hover:underline"
-                  >NetPhlich™</a
-                >. All Rights Reserved.
-              </span>
-              <div class="flex mt-4 sm:justify-center sm:mt-0">
-                <!-- Facebook -->
-                <a
-                  href="https://www.facebook.com/phuc.daothanh.96/"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 8 19"
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Follow us
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="https://github.com/phuckid28" class="hover:underline"
+                    >Github</a
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span class="sr-only">Facebook page</span>
-                </a>
-                <!-- Discord -->
-                <a
-                  href="discordapp.com/users/541189146950238208"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 21 16"
+                </li>
+                <li>
+                  <a
+                    href="https://discordapp.com/users/541189146950238208"
+                    class="hover:underline"
+                    >Discord</a
                   >
-                    <path
-                      d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
-                    />
-                  </svg>
-                  <span class="sr-only">Discord community</span>
-                </a>
-                <!-- Github -->
-                <a
-                  href="https://github.com/phuckid28"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Legal
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="term.html" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="term.html" class="hover:underline"
+                    >Terms &amp; Conditions</a
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span class="sr-only">GitHub account</span>
-                </a>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
-        </footer>
-      
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            >© 2024
+            <a href="main.html" class="hover:underline">NetPhlich™</a>. All
+            Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/phuc.daothanh.96/"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <!-- Discord -->
+            <a
+              href="discordapp.com/users/541189146950238208"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
+              >
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <!-- Github -->
+            <a
+              href="https://github.com/phuckid28"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
