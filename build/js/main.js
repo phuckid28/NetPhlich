@@ -5,7 +5,13 @@ if (param.has("genre")) {
     genID = param.get("genre");
 }
 console.log(genID);
-
+async function fetchMovies() {
+    const response = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&page=${page}`
+    );
+    const data = await response.json();
+    return data.results;
+}
 
 
 
